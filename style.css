@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+@media (max-width: 960px) {
+    html {
+      font-size: 35%;
+    }
+  }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.btn {
+    border: 0.1rem solid black;
+    padding: 0.7rem 2rem;
+    border-radius: 10rem;
+    background: none;
+    width: 20rem;
+    font-weight: 700;
+}
+
+li {
+    list-style: none;
+}
+
+.nav--background {
+    background: rgba(255, 185, 79, 0.5);
+    padding: 2rem 1.5rem;
+    height: 55rem;
+}
+
+.header--nav {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0rem 3rem;
+    margin-bottom: 3rem;
+}
+
+.header--nav li {
+    display: inline;
+    margin-left: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    word-spacing: 0.5rem;
+}
+
+.header--nav li:first-child {
+    margin-left: none;
+}
+
+.img--logo {
+    height: 6rem;
+    width: auto;
+    /* margin-left: 5rem; */
+}
+
+.nav--users-login, .nav--users-register {
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.nav--featured {
+    display: block;
+    margin-bottom: 3rem;
+    width: 75%;
+    padding: 4rem 8rem 10rem 8rem;
+    /* border: 1px solid black; */
+}
+
+.nav--featured hr {
+    width: 88%;
+    border: .02rem solid black;
+}
+
+.nav--featured p, .body--featured p {
+    font-size: 1.5rem;    
+    margin: 0.5rem 0rem;
+}
+
+.nav--featured h1 {
+    font-size: 5rem;    
+    margin: 1rem 0rem;
+}
+
+.nav--featured .btn {
+    margin-top: 2rem;
+}
+
+.main {
+    margin: 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50rem;
+    /* margin-bottom: 16rem; */
+}
+
+.main p {
+    font-size: 1.6rem;  
+}
+
+.main h2 {
+    font-size: 3.5rem;  
+}
+
+.main hr {
+    width: 15%;
+    margin: 0rem;
+    border: .04rem solid black;
+}
+
+.main--secondary, .main--tertiary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    align-items: center;
+}
+
+.main--secondary {
+    margin-bottom: 7rem;
+}
+
+.main--tertiary-text {
+    text-align: right;
+}
+
+.main--tertiary hr {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100%;
+    transform: translateX(-100%);
+}
+
+.img--hero {
+    width: 20rem;
+}
+
+.additional--features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45rem;
+    padding: 5rem 3rem 5rem 3rem;
+    background: rgb(142, 131, 131, 0.7);
+    /* border: 1px solid black; */
+}
+
+.additional--features-left, .additional--features-right {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    /* border: 1px solid black; */
+    width: 35%;
+    text-align: center;
+}
+
+.additional--features-right {
+    margin-left: 5rem;
+}
+
+.additional--features img {
+    margin-right: 4rem;
+    height: 6rem;
+}
+
+.additional--features li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+}
+
+.additional--features li:last-child {
+    margin-bottom: 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    font-size: 1.6rem;
+    height: 35rem;
+    padding: 0rem 5rem;
+}
+
+.footer p {
+    font-size: 3.2rem;
+}
+
+.footer--freetrial .btn {
+    font-size: 1.6rem;
+}
+
+.footer--freetrial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
+    flex-basis: 65%;
+    margin-left: 6rem;
+}
+
+.footer--contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+    margin-left: 2rem;
+}
+
+.footer--contact p {
+    font-weight: 
+}
+
+.footer--contact li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.footer--contact li > p {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.footer--contact img {
+    display: flex;
+    height: 3.5rem;
+    margin-right: 1.5rem;
+} 
