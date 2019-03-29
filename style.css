@@ -69,6 +69,7 @@ h2 {
     width: auto;
     font-size: 2rem;
     padding: 1.5rem 2.5rem;
+    margin-left: 1rem;
     cursor: pointer;
     background-image: linear-gradient(
         to bottom, 
@@ -478,8 +479,6 @@ li {
     flex-basis: 70%;
     align-items: center;
     justify-content: space-evenly;
-    padding-right: 15rem;
-    padding-left: 10rem;
     background-image: linear-gradient(
         to right bottom, 
         rgba(126, 213, 111, 0.5), 
@@ -500,7 +499,7 @@ li {
 }
 
 .footer--freetrial p {
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .footer--freetrial a {
@@ -576,7 +575,7 @@ li {
 }
 
 
-@media (max-width: 1060px) {
+@media (max-width: 960px) {
     .footer {
         display: flex;
         flex-direction: column;
@@ -586,8 +585,7 @@ li {
     
     .footer--freetrial, .footer--contact {
         display: flex; 
-        flex-direction: column;
-        justify-content: center;
+        flex-flow: column nowrap;
         padding: 4rem 0rem;
     }
 
