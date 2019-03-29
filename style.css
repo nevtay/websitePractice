@@ -11,7 +11,7 @@ html {
 
 @media (max-width: 960px) {
     html {
-      font-size: 55%;
+      font-size: 57%;
     }
   }
 
@@ -26,7 +26,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(42, 42, 42);
     cursor: pointer;
 }
 
@@ -35,12 +35,15 @@ h1 {
 }
 
 .underline {
-    background-image:linear-gradient(#5fca66,#5fca66);
+    background-image:linear-gradient(rgba(6, 228, 150, 1),rgba(6, 228, 150, 1));
     background-position:bottom center; /*Adjust the background-position to move the line*/
-    background-size: 200% .3rem; /*Adjust the background size to control length and height*/
+    background-size: 200% ; /*Adjust the background size to control length and height*/
     background-repeat:no-repeat;
-    padding-bottom: .5rem;
-    padding-left: .9rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    border-radius: 0.5rem;
 }
 
 h2 {
@@ -48,9 +51,9 @@ h2 {
 }
 
 .btn {
-    border: 0.15rem solid black;
+    border: none;
     padding: 2rem 4rem;
-    border-radius: 0.75rem;
+    border-radius: .3rem;
     background: none;
     width: auto;
     font-weight: 700;
@@ -69,8 +72,8 @@ h2 {
     cursor: pointer;
     background-image: linear-gradient(
         to bottom, 
-        rgba(115, 255, 90, 0.3), 
-        rgba(6, 228, 150, 0.3));
+        rgba(27, 221, 137, 1), 
+        rgba(6, 228, 150, 1));
 }
 
 .btn-learnmore {
@@ -78,9 +81,15 @@ h2 {
     padding: 0.5rem 0.5rem;
     background-image: linear-gradient(
         to bottom, 
-        rgba(115, 255, 90, 0.3), 
-        rgba(6, 228, 150, 0.3));
+        rgba(27, 221, 137, 1), 
+        rgba(6, 228, 150, 1));
 }
+
+.btn-learnmore:hover {
+    box-shadow: .2rem .2rem  #333333;
+    transition: 0.25s;
+    color: white;
+  }
 
 li {
     list-style: none;
@@ -89,8 +98,8 @@ li {
 .nav--background {
     background-image: linear-gradient(
         to right bottom, 
-        rgba(126, 213, 111, 0.8), 
-        rgba(40, 180, 131, 0.8));
+        rgba(126, 213, 111, 0.5), 
+        rgba(40, 180, 131, 0.5));
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 82%, 0 100%, 0 0);
     clip-path: polygon(50% 0%, 100% 0, 100% 82%, 0 100%, 0 0);
     padding: 4rem 0rem 8rem 0rem;
@@ -115,6 +124,7 @@ li {
     cursor: pointer;
     text-decoration: none;
     word-spacing: 0.5rem;
+    font-weight: 700;
 }
 
 .header--nav li:first-child {
@@ -138,7 +148,13 @@ li {
 
 .nav--users-login, .nav--users-register {
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 1.6rem;   
+}
+
+.nav--users-login a:hover, .nav--users-register a:hover {
+    color: white;
+    font-size: 1.65rem;
+    transition: .2s all;
 }
 
 .nav--featured {
@@ -168,9 +184,11 @@ li {
 }
 
 @media (max-width: 960px) {
-    .btn-learnmore {
-        font-size: 2rem;
+    .btn-learnmore:hover {
+        box-shadow: none;
+        transition: none;
       }
+      
     
     .inline--logo {
         transform: translateY(-3rem);
@@ -218,7 +236,7 @@ li {
 }
 
 
-@media (max-width: 321px) {
+@media (max-width: 426px) {
     .header--nav li {
         display: inline;
         flex-flow: row wrap;
@@ -230,7 +248,13 @@ li {
         border: 0.1rem solid black;
         padding: 0.5rem 1.5rem;
     }
+
+    .nav--background {
+        clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+    }
 }
+
+
 
 
 .main {
@@ -253,7 +277,6 @@ li {
     width: 100%;
     letter-spacing: 1rem;
     padding: 4rem 0rem 0rem 0;
-    /* background: rgba(253,196,182, 0.3);  */
 }
 
 .main hr {
@@ -354,7 +377,6 @@ li {
     letter-spacing: 1rem;
     align-items:center;
     padding: 5rem 0rem 0rem 0rem;
-    /* background:rgba(229,149,114, 0.3); */
 }
 
 .additional--features {
@@ -369,7 +391,6 @@ li {
 
 .additional--features-bg {
     z-index: -100;
-    /* background:rgba(229,149,114, 0.3); */
 }
 
 .additional--features-left, .additional--features-right {
@@ -384,7 +405,7 @@ li {
 .additional--features-left {
     border-right: 1px solid;
     border-width: 0.5rem;
-    border-color: #5eb864;
+    border-color: rgba(6, 228, 150, 1);
 }
 
 .additional--features img {
@@ -413,7 +434,6 @@ li {
         display: flex;
         height: auto;
         flex-direction: column;
-        /* background:rgba(229,149,114, 0.3);         */
         padding: 5rem 0rem;
     }
 
@@ -443,25 +463,30 @@ li {
     display: flex;
     flex-direction: row;
     height: auto;
-    /* background: rgba(38,148,171, 0.3); */
 }
 
 .footer--freetrial, .footer--contact {
     display: flex; 
     flex-direction: row;
-    justify-content: center;
-    padding: 3rem 0rem;
+    justify-content: space-around;
+    padding: 4rem 0rem;
 }
 
 .footer--freetrial {
-    flex-basis: 55%;
+    flex-basis: 70%;
     align-items: center;
-    text-align: center;
     justify-content: space-evenly;
+    padding-right: 25rem;
+    padding-left: 10rem;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(126, 213, 111, 0.5), 
+        rgba(40, 180, 131, 0.5));
+    clip-path: polygon(0 0, 75% 0%, 100% 100%, 0% 100%);
 }
 
 .footer--freetrail-green {
-    color: rgba(6, 228, 150, 1);
+    color: rgb(5, 213, 140);
     font-size: 7rem;
 }
 
@@ -470,17 +495,20 @@ li {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: space-around;
 }
 
 .footer--freetrial p {
     font-size: 4rem;
 }
 
+.footer--freetrial a {
+    color: white;
+}
+
 .footer--contact {
-    align-items: center;
-    flex-basis: 45%;
-    /* background: rgba(38,148,171, 0.75); */
+    align-items: center;s
+    flex-basis: auto;
+    /* border: 1px solid; */
 }
 
 .footer--contact li {
@@ -492,12 +520,11 @@ li {
     font-size: 1.6rem;
 }
 
-.footer--contact li > p.underline {
-    padding-bottom: 0;
-    padding-left: 0;
-    margin: auto;
+.footer--contact li > p {
+    text-align: center;
+    margin: 0 auto;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .footer--contact img {
@@ -519,7 +546,7 @@ li {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    background: rgb(52, 52, 52, .75);
+    background: rgb(52, 52, 52, 1);
     color: #fff;
 }
 
@@ -560,6 +587,10 @@ li {
         justify-content: center;
         padding: 4rem 0rem;
     }
+
+    .footer--freetrial {
+        clip-path: none;
+    }
     
     .footer--freetrial p {
         font-size: 4.5rem;
@@ -567,6 +598,7 @@ li {
     
     .footer--contact {
         align-items: center;
+        flex-basis: auto;
     }
     
     .footer--contact li {
