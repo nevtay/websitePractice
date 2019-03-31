@@ -229,7 +229,6 @@ li {
 
 }
 
-
 @media (max-width: 426px) {
     .header--nav li {
         display: inline;
@@ -247,9 +246,6 @@ li {
         clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
     }
 }
-
-
-
 
 .main {
     height: auto;
@@ -356,11 +352,11 @@ li {
 
     .main--tertiary .img--hero {    
         margin-right: 0;
+        margin-top: 1rem;
     }
     
     .main--secondary .img--hero {    
         margin-left: 0;
-        margin-top: .75rem;
     }
 }
 
