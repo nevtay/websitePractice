@@ -27,7 +27,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -44,6 +44,10 @@ h2 {
     color: rgb(5, 213, 140);
     font-size: 4.4rem;
     letter-spacing: .5rem;
+}
+
+.h1--extraLarge {
+    font-size: 8rem;
 }
 
 .btn {
@@ -104,10 +108,10 @@ li {
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 82%, 0 100%, 0 0);
     clip-path: polygon(51% 100%, 100% 84%, 100% 0, 0 0, 0 84%);
     padding: 2rem 0rem 8rem 0rem;
-    height: 40rem;
+    height: 20rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .header--nav {
@@ -116,8 +120,9 @@ li {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     padding: 0rem 3rem;
+    /* border: 1px solid; */
 }
 
 .header--nav li {
@@ -134,6 +139,7 @@ li {
     margin-left: none;
 }
 
+
 .inline--logo {
     display: flex;
     align-items: center;
@@ -142,22 +148,12 @@ li {
 .inline--logo p {
     margin-left: 1rem;
     font-weight: 700;
+    color: rgb(251, 255, 249);
 }
 
 .img--logo {
-    height: 6rem;
+    height: 7.5rem;
     width: auto;
-}
-
-.nav--users-login, .nav--users-register {
-    cursor: pointer;
-    font-size: 1.6rem;   
-}
-
-.nav--users-login a:hover, .nav--users-register a:hover {
-    color: white;
-    font-size: 1.6rem;
-    transition: .2s all;
 }
 
 .nav--featured {
@@ -202,7 +198,7 @@ li {
     }
     
     .img--logo {
-        height: 5rem;
+        height: 7.5rem;
     }
 
     .header--nav {
@@ -282,7 +278,7 @@ li {
     border: .07rem solid black;
 }
 
-.main--secondary, .main--tertiary {
+.main--secondary {
     display: flex;
     flex-direction: row;
     margin: 0rem 0rem 4rem 0;
@@ -290,32 +286,14 @@ li {
     width: auto;
 } 
 
-.main--secondary p, .main--tertiary p {
+.main--secondary p {
     padding: 1rem 0rem;
-}
-
-.main--tertiary-text {
-    text-align: right;
-    padding: 1.5rem;
-}
-
-.main--tertiary hr {
-    display: flex;
-    flex-direction: row;
-    margin-left: 100%;
-    transform: translateX(-100%);
-}
-
-.main--tertiary .img--hero {    
-    width: 15rem;
-    margin-right: 20rem;
 }
 
 .main--secondary .img--hero {    
     width: 15rem;
     margin-left: 20rem;
 }
-
 
 @media (max-width: 960px) {
     
@@ -385,7 +363,6 @@ li {
     align-items: center;
     height: auto;
     padding: 5rem 0rem;
-    z-index: 100;
 }
 
 .additional--features-bg {
@@ -461,21 +438,8 @@ li {
 .footer {
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
+    width: 100%;    
     height: 60rem;
-}
-
-.footer--freetrial {
-    display: flex; 
-    flex-basis: 60%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba(126, 213, 111, 0.5), 
-        rgba(40, 180, 131, 0.5));
-    clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
 }
 
 .footer--align {
@@ -485,29 +449,26 @@ li {
     align-items: center;
 }
 
-.footer--freetrial p {
-    font-size: 3.5rem;
-}
-
-.footer--freetrial a {
-    color: rgb(251, 255, 249)
-}
-
 .footer--contact {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 60%;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(126, 213, 111, 0.5), 
+        rgba(40, 180, 131, 0.5));
+    clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
 }
 
 .footer--form-name, .footer--form-email, .footer--form-message {
     border: none;
     border-radius: .3rem;
-    background: rgba(151, 177, 138, 0.3);
+    background: rgb(234, 243, 231);
     margin: .5rem 0;
     height: 4rem;
-    width: 30rem;
+    width: 36rem;
     padding-left: 1rem;
 }
 
@@ -527,28 +488,36 @@ li {
     margin-left: 50%;
 }
 
-/* .footer--form {
+.footer--social {
+    flex-basis: 45%;
+}
+
+.footer--social img {
+    height: 7.5rem;
+    margin-right: 3rem; 
+}
+
+.footer--social ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    font-size: 1.6rem;
+    /* border: 1px solid; */
 }
 
-.footer--contact li > p {
-    text-align: center;
-    margin: 0 auto;
-    font-weight: bold;
+.footer--social li {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
     font-size: 3rem;
-    padding-right: 0.2rem;
-    letter-spacing: 1rem;
-} */
+    padding-left: 3rem;
+}
 
 .footer--contact img {
-    display: flex;
     height: 3.5rem;
-    margin-right: 1.5rem;
 } 
 
 .footer--location {
@@ -598,24 +567,35 @@ li {
         justify-content: space-between;
         height: auto;
     }
+
+    .footer--form-name, .footer--form-email, .footer--form-message {
+        border: none;
+        border-radius: .3rem;
+        background: rgb(234, 243, 231);
+        margin: .5rem 0;
+        height: 4rem;
+        width: 30rem;
+        padding-left: 1rem;
+    }
     
-    .footer--freetrial, .footer--contact {
+    .footer--social, .footer--contact {
         display: flex; 
         flex-flow: column nowrap;
         padding: 4rem 0rem;
     }
 
-    .footer--freetrial {
-        clip-path: none;
+    .footer--social li {
+        flex-direction: column;
     }
     
-    .footer--freetrial p {
-        font-size: 4.5rem;
+    .footer--social li {
+        font-size: 3.5rem;
     }
     
     .footer--contact {
         align-items: center;
         flex-basis: auto;
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     }
     
     .footer--contact li {
