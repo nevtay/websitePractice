@@ -89,8 +89,8 @@ li {
         rgba(126, 213, 111, 0.7), 
         rgba(40, 180, 131, 0.7));
     -webkit-animation-name: background--downwards;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     -webkit-animation-fill-mode: forwards;
     height: auto;
 }
@@ -113,10 +113,11 @@ li {
     cursor: pointer;
     letter-spacing: .2rem;
     font-weight: 700;
+    margin-right: 3rem;
 }
 
-.header--nav li:first-child {
-    margin-left: none;
+.header--nav li:last-child {
+    margin-right: 0;
 }
 
 .inline--logo {
@@ -162,6 +163,10 @@ li {
         font-weight: bold;
         text-align: center;
         cursor: pointer; 
+    }
+    
+    .header--nav li {
+    margin-right: .5rem;
     }
 }
 
@@ -270,7 +275,7 @@ li {
     padding: 5rem;
     -webkit-animation-name: loadIn;
     -webkit-animation-duration: 1s;
-    -webkit-animation-delay: 2s;
+    -webkit-animation-delay: 1.6s;
     opacity: 0;
     -webkit-animation-fill-mode: forwards;
 }
@@ -533,7 +538,7 @@ li {
         align-items: center;
         height: 60rem;
         flex-basis: auto;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
     }
     
     .footer--contact li {
