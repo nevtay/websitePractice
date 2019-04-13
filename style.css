@@ -23,6 +23,8 @@ body {
     overflow-x: hidden;
     width: 100%;
     background: rgb(241, 248, 233);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
 }
 
 a {

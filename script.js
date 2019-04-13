@@ -7,6 +7,7 @@ const logo = document.querySelector('#logo');
 const skills = document.querySelector('#skills');
 
 function smoothScroll(target, duration) {
+    event.preventDefault();
     var target = document.querySelector(target);
     var targetPosition = target.getBoundingClientRect().top;
     var startPosition = window.pageYOffset;
@@ -38,14 +39,14 @@ function smoothScroll(target, duration) {
 
 
 navAbout.addEventListener('click', function() {
-    smoothScroll('#about', 1000);
+    smoothScroll('#about', 750);
 });
 
 navCompetencies.addEventListener('click', function() {
-    smoothScroll('#skills', 1000);
+    smoothScroll('#skills', 750);
 });
 
 navContact.addEventListener('click', function() {
-    smoothScroll('.footer--contact', 1000);
+    smoothScroll('.footer--contact', 750);
 });
 
