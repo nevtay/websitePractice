@@ -22,7 +22,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     width: 100%;
-    background: rgb(239, 255, 233);
+    background: rgb(241, 248, 233);
 }
 
 a {
@@ -56,7 +56,7 @@ h2 {
 }
 
 .text-light {
-    color: rgb(239, 255, 233);
+    color: rgb(241, 248, 233);
 }
 
 .text--xlarge {
@@ -75,8 +75,7 @@ h2 {
 }
 
 .text--small {
-    color: rgb(4, 167, 110);
-    font-size: 1.6rem;
+    font-size: 2rem;
     letter-spacing: .2rem;
 }
 
@@ -109,8 +108,54 @@ li {
 }
 
 @keyframes loadIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
+@keyframes dropIn {
+    0% { 
+        transform: translateY(-10rem); 
+    }
+
+    78% {
+        transform: translateY(10rem);
+    }
+
+    100% { 
+        transform: translateY(0rem); 
+    }
+}
+
+@keyframes slideInFromRight {
+    0% { 
+        transform: translateX(100%); 
+    }
+    
+    80% { 
+        transform: translateX(-3%); 
+    }
+
+    100% { 
+        transform: translateX(0rem); 
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% { 
+        transform: translateX(-100%); 
+    }
+    
+    80% { 
+        transform: translateX(3%); 
+    }
+
+    100% { 
+        transform: translateX(0rem); 
+    }
 }
 
 .nav--background {
@@ -127,7 +172,7 @@ li {
         rgba(126, 213, 111, .7), 
         rgba(40, 180, 131, .7));
     -webkit-animation-name: background--downwards;
-    -webkit-animation-duration: 1.75s;
+    -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     background-blend-mode: screen;
@@ -141,16 +186,16 @@ li {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 3rem 0rem 3rem;
+    padding: 0rem 3rem 0rem 8rem;
     width: 100%;
     font-size: 1.8rem;
     z-index: 100;   
-    /* border: 1px solid black; */
 } 
 
 .navbar--ul {
-    /* border: 1px solid black; */
-    transform: translateY(-4rem)
+    transform: translateY(-4rem);
+    -webkit-animation: slideInFromRight 1.5s, loadIn 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .navbar li {
@@ -167,16 +212,18 @@ li {
 
 .inline--logo {
     opacity: 0;
-    animation-name: loadIn;
-    animation-delay: .4s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: loadIn;
+    -webkit-animation-delay: .4s;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .img--logo {
     height: 15rem;
     width: auto;
     border-radius: 50%;
+    -webkit-animation: slideInFromLeft 1.5s, loadIn 1.5s;
+    -webkit-animation-fill-mode: forwards;
 }
 
 .home--header {
@@ -187,6 +234,9 @@ li {
     text-align: center;
     width: 100%;
     padding: 2rem 4rem;
+    animation: dropIn, loadIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 768px) {
