@@ -122,7 +122,7 @@ li {
     }
 
     78% {
-        transform: translateY(10rem);
+        transform: translateY(5rem);
     }
 
     100% { 
@@ -150,13 +150,25 @@ li {
     }
     
     80% { 
-        transform: translateX(3%); 
+        transform: translateX(3rem); 
     }
 
     100% { 
         transform: translateX(0rem); 
     }
 }
+
+@keyframes slideInFromLeft_noBounce {
+    0% { 
+        transform: translateX(-100%); 
+    }
+    
+
+    100% { 
+        transform: translateX(0rem); 
+    }
+}
+
 
 .nav--background {
     position: relative;
@@ -259,7 +271,7 @@ li {
         position: relative;
         margin-top: -20rem;
         padding-top: 0rem;
-        height: 95rem;
+        height: 83rem;
     }
 
     .navbar { 
@@ -520,6 +532,7 @@ li {
             rgba(40, 180, 131, 0.7));
     clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
     background-blend-mode: screen;
+    -webkit-animation: slideInFromLeft_noBounce 1.5s;
 }
 
 .footer--form-name, .footer--form-email, .footer--form-message {
