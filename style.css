@@ -67,12 +67,12 @@ h2 {
 }
 
 .text--large {
-    font-size: 8rem;
+    font-size: 6rem;
     letter-spacing: .2rem;
 }
 
-.text--normal {
-    font-size: 4rem;
+.text--medium {
+    font-size: 3rem;
     letter-spacing: .2rem;
 }
 
@@ -178,7 +178,7 @@ li {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    top: 0;
+    top: 6rem;
     z-index: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%231e1e1e' fill-opacity='0.09' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E"),
     linear-gradient(
@@ -204,12 +204,14 @@ li {
     width: 100%;
     font-size: 1.8rem;
     z-index: 100;   
+    height: auto;
 } 
 
 .navbar--ul {
     transform: translateY(-4rem);
     -webkit-animation: slideInFromRight 1.5s, loadIn 1.5s;
     animation-fill-mode: forwards;
+    height: auto;
 }
 
 .navbar li {
@@ -222,6 +224,11 @@ li {
 
 .navbar li:last-child {
     margin-right: 0;
+}
+
+.navbar ul li:hover, .navbar ul li a:hover {
+    color: rgb(255, 124, 107);
+    transition: all .25s ;
 }
 
 .inline--logo {
@@ -274,6 +281,7 @@ li {
         margin-top: -20rem;
         padding-top: 0rem;
         height: 83rem;
+        top: 0;
     }
 
     .navbar { 
@@ -291,7 +299,7 @@ li {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
-        height: 10rem;
+        height: auto;
         width: 100%;         
         transform: translateY(0rem)
     }
@@ -339,7 +347,7 @@ li {
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 5rem 0rem; 
+    padding: 7rem 0rem; 
     align-items: center;
     -webkit-animation-name: loadIn;
     -webkit-animation-duration: 1s;
@@ -352,7 +360,7 @@ li {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 0rem 0rem 4rem 0;
+    margin: 0rem 0rem 2rem 0;
     padding: 0rem 2rem;
     align-items: center;
     width: 100%;
@@ -425,7 +433,7 @@ li {
 }
 
 .additional--divider {
-    height: 56rem;
+    height: 64rem;
     left: 49.75%;
     border: .4rem solid rgba(6, 228, 150, 1);
     position: absolute;
@@ -534,6 +542,7 @@ li {
             rgba(40, 180, 131, 0.7));
     clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
     background-blend-mode: screen;
+    -webkit-animation-delay: .5s;
     -webkit-animation: slideInFromLeft_noBounce 1.5s;
 }
 
@@ -571,7 +580,7 @@ li {
     transform: perspective(0px) translateZ(15);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
     -webkit-transition-property: transform;
     transition-property: transform;
     -webkit-transition-timing-function: ease-out;
@@ -580,8 +589,8 @@ li {
 
 .footer--contact .btn:hover, .footer--contact .btn:focus, .footer--contact .btn:active{
     background-image: url("./images/images_socialmedia/email-moving.svg");
-    transform: translateX(1.5rem);
-    -webkit-transform: translateX(1.5rem);
+    transform: translateX(1rem);
+    -webkit-transform: translateX(1rem);
     background-size: 62%;
   }
 
@@ -606,18 +615,18 @@ li {
     font-weight: 700;
 }
 
+.footer--social span {
+    word-break: break-all;
+    text-align: center;
+}
+
 .footer--social li {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     width: 100%;
     margin: 2rem 0;
-    font-size: 3rem;
-    padding: 0rem 3rem;
-}
-
-.footer--social li a { 
-    color: rgb(6, 189, 125);   
+    padding: 0rem 2rem;
 }
 
 .footer--contact img {
@@ -631,17 +640,19 @@ li {
 }
 
 .footer--bar {
+    position: sticky;
+    bottom: 0rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
     padding: 1rem 0rem;
     height: auto;
     /* justify-content: space-between; */
     background: rgb(52, 52, 52, 1);
     color: #fff;
 }
+
 
 .footer--bar-copyright ul {
     display: flex;
