@@ -210,7 +210,7 @@ li {
 .navbar--ul {
     transform: translateY(-4rem);
     -webkit-animation: slideInFromRight 1.5s, loadIn 1.5s;
-    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
     height: auto;
 }
 
@@ -424,10 +424,10 @@ li {
     flex-flow: row wrap;
     justify-content: center;
     height: auto;
-    padding: 7rem 0rem;
+    padding: 5rem 0rem;
     -webkit-animation-name: loadIn;
     -webkit-animation-duration: 1s;
-    -webkit-animation-delay: 1.5s;
+    -webkit-animation-delay: 2s;
     opacity: 0;
     -webkit-animation-fill-mode: forwards;
 }
@@ -454,6 +454,12 @@ li {
     flex-basis: 50%;
 }
 
+.additional--features-left {
+    /* border-right: .1rem solid;
+    border-width: .7rem;
+    border-color: rgba(6, 228, 150, 1); */
+}
+
 .additional--features img {
     display: flex;
     flex-direction: column;
@@ -476,7 +482,7 @@ li {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
 
     .additional--features {
         display: flex;
@@ -515,10 +521,10 @@ li {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;    
-    height: 75rem;
+    height: 70rem;
     -webkit-animation-name: loadIn;
-    -webkit-animation-delay: 1.5s;
     -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
     opacity: 0;
     -webkit-animation-fill-mode: forwards;
 }
@@ -536,8 +542,8 @@ li {
             rgba(40, 180, 131, 0.7));
     clip-path: polygon(0% 0%, 83% 0, 100% 50%, 83% 100%, 0% 100%);
     background-blend-mode: screen;
+    -webkit-animation-delay: .5s;
     -webkit-animation: slideInFromLeft_noBounce 1.5s;
-    -webkit-animation-delay: 1.5s;
 }
 
 .footer--form-name, .footer--form-email, .footer--form-message {
@@ -634,7 +640,7 @@ li {
 }
 
 .footer--bar {
-    position: static;
+    position: sticky;
     bottom: 0rem;
     display: flex;
     flex-flow: row wrap;
@@ -642,10 +648,9 @@ li {
     align-items: center;
     padding: 1rem 0rem;
     height: auto;
+    /* justify-content: space-between; */
     background: rgb(52, 52, 52, 1);
     color: #fff;
-    -webkit-animation: loadIn 1.5s;
-    -webkit-animation-fill-mode: forwards;
 }
 
 
@@ -658,7 +663,7 @@ li {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
     .footer {
         display: flex;
         flex-direction: column;
