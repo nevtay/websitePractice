@@ -255,33 +255,36 @@ li {
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 2rem 4rem;
+    padding: 0rem 4rem;
+    margin-top: 5rem;
     animation: dropIn, loadIn;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 424px) {
 
     .img--logo {
-        margin-bottom: 3rem;
+        margin-bottom: .5rem;
     }
     
     .nav--background {
         position: relative;
-        padding-top: 0rem;
-        height: 95vh;
+        padding: 0rem;
+        height: 98vh;
         top: 0;
     }
 
     .navbar { 
         position: absolute;
+        top: 0;
+        padding: 0;
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     } 
 
     .navbar--ul {
@@ -301,42 +304,29 @@ li {
         width: 100%;
         display: flex;
         flex-flow: column wrap;
-        padding: 0;
+        margin-top: 17rem;
     }
 
     .home--header .text--xlarge {
-        font-size: 16rem;
-        line-height: 1.5;
+        font-size: 9rem;
+        line-height: 1.2;
     }
 }
 
-@media (max-width: 767px) {
-    .btn-learnmore:hover {
-        box-shadow: none;
-        transition: none;
-    }
-
-    .inline--logo {
-        position: relative;
-        left: 0;
-        top: 0;
-    }
+/* @media (max-width: 567px) {
     
     .img--logo {
-        margin-bottom: 0rem;
+        margin-bottom: .5rem;
     }
 
     .nav--background {
         position: relative;
-        /* margin-top: -30rem; */
         padding-top: 0rem;
-        height: 99vh;
-        top: 0;
+        height: 97vh;
     }
 
     .navbar { 
         position: absolute;
-        /* border: 1px solid black; */
         top: 0;
         padding: 0;
         display: flex;
@@ -345,36 +335,22 @@ li {
         align-items: center;
         width: 100%;
         font-size: 1.8rem;
-    } 
-
-    .navbar--ul {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        height: auto;
-        width: 100%;          */
     }
-
-    .navbar li {
-        margin-right: 0;
-    }
-
+    
     .home--header {
         height: auto;
         width: 100%;
         display: flex;
         flex-flow: column wrap;
-        top: 15rem;
-        /* border: 1px solid black; */
-        margin-top: 15rem;
+        margin-top: 18rem;
         padding: 0;
     }
 
     .home--header .text--xlarge {
-        font-size: 10rem;
-        line-height: 1.2;
+        font-size: 8rem;
+        line-height: 1.4;
     }
-}
+} */
 
 @media (max-width: 426px) {
     .nav--background {
