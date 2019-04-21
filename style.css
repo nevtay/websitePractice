@@ -262,7 +262,7 @@ li {
     animation-fill-mode: forwards;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 768px) {
 
     .img--logo {
         margin-bottom: .5rem;
